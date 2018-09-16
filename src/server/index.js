@@ -10,6 +10,7 @@ const app = express();
 app.use(express.static(distPath));
 
 app.get(['/', '/stats', '/create-post'], (req, res) => {
+  console.log(`Express GET: ${req.path}`);
   res.sendFile(indexHtmlPath);
 });
 

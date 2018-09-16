@@ -13,11 +13,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	entry: path.resolve(__dirname, 'src/client/index.js'),
-	output: {
-		filename: 'js/[name].[chunkhash:8].js',
-		chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
-	},
+  entry: {
+    main: path.resolve(__dirname, 'src/client/index.js'),
+  },
+  output: {
+    filename: 'js/[name].[chunkhash:8].js',
+    // chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  },
   module: {
     rules: [
       {
@@ -71,21 +73,5 @@ module.exports = {
     }),
   ],
 
-  mode: 'production',
-
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendors: {
-          priority: -10,
-          test: /[\\/]node_modules[\\/]/,
-        },
-      },
-
-      chunks: 'async',
-      minChunks: 1,
-      minSize: 30000,
-      name: false,
-    },
-  },
+  mode: 'development',
 };
