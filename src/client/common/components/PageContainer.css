@@ -1,0 +1,26 @@
+
+.PageContainer-outerContainer {
+  background-color: aliceblue;
+}
+
+.PageContainer-innerContainer {
+  max-width: 760px;
+  padding: 20px 80px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.PageContainer-header {
+  background-color: #222;
+  height: 60px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 12px;
+  border-radius: 2px;
+}
+
+.PageContainer-title {
+  font-size: 1.5em;
+  margin: 0;
+}

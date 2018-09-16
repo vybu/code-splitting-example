@@ -1,0 +1,36 @@
+.CreatePostForm {
+  margin-top: 180px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.CreatePostForm-name {
+  margin-bottom: 20px;
+  padding: 6px;
+}
+
+.CreatePostForm-rce {
+  margin-bottom: 20px;
+  height: 260px;
+  width: 600px;
+}
+.CreatePostForm-rce .ql-container {
+  height: 220px;
+}
+
+.CreatePostForm-submit {
+  color: white;
+  border:1px solid #1EAEDB;
+  background-color: #1EAEDB;
+  height: 32px;
+  text-align: center;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 20px;
+  border-radius: 2px;
+  font-size: 10px;
+  cursor: pointer;
+}
