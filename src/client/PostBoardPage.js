@@ -3,7 +3,7 @@ import PostList from './modules/postList/components/PostList';
 import PageContainer from './common/components/PageContainer';
 
 const PostBoardPage = () => (
-  <PageContainer title="post board">
+  <PageContainer title="Post Board">
     <PostList />
   </PageContainer>
 );

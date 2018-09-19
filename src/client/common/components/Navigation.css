@@ -2,3 +2,12 @@
   text-align: end;
   margin-bottom: 6px;
 }
+
+.Navigation-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5)
+}
+
+.Navigation-linkActive {
+  color: rgba(0, 0, 0, 0.9)
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const ChartTitle = ({ children }) => <h2 style={{ textAlign: 'center' }}>{children}</h2>;
+import './ChartTitle.css';
+const ChartTitle = ({ children }) => (
+  <h2 className="ChartTitle">{children}</h2>
+);
 
 ChartTitle.propTypes = {
   children: PropTypes.string,
