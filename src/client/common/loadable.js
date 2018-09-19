@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export const loadable = (loadComponent) => {
+const loadable = (loadComponent) => {
   class Loadable extends Component {
     state = {
       component: null,
@@ -18,3 +18,5 @@ export const loadable = (loadComponent) => {
 
   return Loadable;
 };
+
+export default loadable;

@@ -3,7 +3,7 @@ import { object } from 'prop-types';
 
 const withStoreEnhancer = ({ reducerName, reducer, middleware }) => (WrappedComponent) => {
   class Extended extends Component {
-    componentDidMount() {
+    componentWillMount() {
       if (reducerName && reducer) {
         this.context.store.injectReducer(reducerName, reducer);
       }
