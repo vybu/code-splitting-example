@@ -1,16 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //eslint-disable-line
 const path = require('path');
 
-/*
- * We've enabled MiniCssExtractPlugin for you. This allows your app to
- * use css modules that will be moved into a separate CSS file instead of inside
- * one of your module entries!
- *
- * https://github.com/webpack-contrib/mini-css-extract-plugin
- *
- */
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //eslint-disable-line
 
 module.exports = {
   entry: {
@@ -23,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        include: [ path.resolve(__dirname, 'src/client') ],
+        include: [path.resolve(__dirname, 'src/client')],
         loader: 'babel-loader',
 
         options: {
@@ -65,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `styles/[name].[contenthash:8].css`,
+      filename: 'styles/[name].[contenthash:8].css',
     }),
     new HtmlWebpackPlugin({
       inject: true,

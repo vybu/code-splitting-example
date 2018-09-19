@@ -11,10 +11,14 @@ import { getAuthorNameValue, getBodyValue } from '../postForm.selectors';
 import './CreatePostForm.css';
 
 class CreatePostForm extends Component {
-  setAuthorName = (ev) => this.props.setAuthor(ev.target.value);
-  setBodyValue = (value) => this.props.setBody(value);
+  setAuthorName = ev => this.props.setAuthor(ev.target.value);
+
+  setBodyValue = value => this.props.setBody(value);
+
   submit = () => {
-    const { createPost, setAuthor, setBody, onSubmit } = this.props;
+    const {
+      createPost, setAuthor, setBody, onSubmit,
+    } = this.props;
     setAuthor('');
     setBody('');
     createPost({ authorName: this.props.authorName, body: this.props.body });
@@ -23,7 +27,7 @@ class CreatePostForm extends Component {
 
   render() {
     return (
-      <form className="CreatePostForm" onClick={(e) => e.preventDefault()}>
+      <form className="CreatePostForm" onClick={e => e.preventDefault()}>
         <input
           className="CreatePostForm-name"
           placeholder="Name (optional)"
@@ -38,7 +42,7 @@ class CreatePostForm extends Component {
           value={this.props.body}
           onChange={this.setBodyValue}
         />
-        <button className="CreatePostForm-submit" onClick={this.submit}>
+        <button type="submit" className="CreatePostForm-submit" onClick={this.submit}>
           Submit
         </button>
       </form>
@@ -50,12 +54,12 @@ CreatePostForm.propTypes = {
   createPost: PropTypes.func,
   setAuthor: PropTypes.func,
   setBody: PropTypes.func,
+  onSubmit: PropTypes.func,
   authorName: PropTypes.string,
   body: PropTypes.string,
-  history: PropTypes.object,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   authorName: getAuthorNameValue(state),
   body: getBodyValue(state),
 });

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import './Dialog.css';
 
-const stopPropagation = (event) => event.stopPropagation();
+const stopPropagation = event => event.stopPropagation();
 
 const Dialog = ({ onOutsideClick, children }) => (
-  <div onClick={onOutsideClick} className="Dialog">
+  <div role="dialog" onClick={onOutsideClick} className="Dialog">
     <div onClick={stopPropagation}>{children}</div>
   </div>
 );

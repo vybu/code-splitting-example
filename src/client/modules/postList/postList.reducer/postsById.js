@@ -8,7 +8,7 @@ export const byId = (state = {}, action) => {
       return {
         ...state,
         ...action.payload.reduce((list, post) => {
-          list[post.id] = post;
+          list[post.id] = post; //eslint-disable-line
           return list;
         }, {}),
       };
