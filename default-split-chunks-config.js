@@ -1,4 +1,5 @@
-/* 
+/* eslint-disable */
+/*
   Terminology:
   # Chunk
    it's a bundle that webpack generates, a file.

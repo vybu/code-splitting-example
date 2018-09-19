@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //eslint-disable-line
 const path = require('path');
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //eslint-disable-line
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].[chunkhash:8].js',
-    // chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
   module: {
     rules: [
