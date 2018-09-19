@@ -4,7 +4,7 @@
   "description": "Example project for code splitting with webpack 4",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.prod.js --profile --json > webpack.stats.json",
+    "build": "webpack --config ./webpack.config.js --profile --json > webpack.stats.json",
     "analyze": "webpack-bundle-analyzer ./webpack.stats.json ./dist --default-sizes gzip",
     "server": "node ./src/server"
   },
@@ -44,6 +44,7 @@
     "mini-css-extract-plugin": "^0.4.2",
     "style-loader": "^0.23.0",
     "webpack": "^4.18.0",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0"
   }
 }

@@ -1,14 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //eslint-disable-line
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //eslint-disable-line
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src/client/index.js'),
   },
   output: {
-    filename: 'js/[name].[chunkhash:8].js',
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: '[name].[chunkhash:8].chunk.js',
   },
   module: {
     rules: [
@@ -55,13 +56,20 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash:8].css',
+      filename: '[name].[contenthash:8].css',
+      chunkFilename: '[name].[chunkhash:8].chunk.js',
     }),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.join(__dirname, 'public/index.html'),
     }),
+    new BundleAnalyzerPlugin(),
   ],
 
   mode: 'development',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
