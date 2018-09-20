@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import CreatePostForm from './modules/postFormDialog/components/CreatePostForm';
+import CreatePostForm from './modules/postForm/components/CreatePostForm';
 import Dialog from './common/components/Dialog';
 
 const CreatePostDialog = ({ history }) => {

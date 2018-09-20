@@ -21,3 +21,10 @@ For developers:
 * Small app (smaller chunks reduce compression efficiency)
 * You don't have HTTP2 server
 * Your user don't have HTTP2 capable browsers
+
+
+
+## Links
+https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/
+https://github.com/smooth-code/loadable-components
+https://github.com/vybu/async-redux-store-enhancer
