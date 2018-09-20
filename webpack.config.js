@@ -57,7 +57,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:8].css',
-      chunkFilename: '[name].[chunkhash:8].chunk.js',
+      chunkFilename: '[name].[chunkhash:8].chunk.css',
     }),
     new HtmlWebpackPlugin({
       inject: true,
