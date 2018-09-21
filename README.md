@@ -25,6 +25,7 @@ For developers:
 
 
 ## Links
+https://www.npmjs.com/package/webpack-bundle-analyzer
 https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/
 https://github.com/smooth-code/loadable-components
 https://github.com/vybu/async-redux-store-enhancer

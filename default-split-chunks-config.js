@@ -11,12 +11,12 @@
 
 module.exports = {
   chunks: 'async', // "all", "initial", "async", (chunk) => chunk.name === 'app'
-  minSize: 30000, // KB, minimum size for chunk to be created (pre-min and pre-gzip)
-  minChunks: 1, // minimum number of chunks that must share a module before splitting.
-  maxAsyncRequests: 5, // when loading async chunk
-  maxInitialRequests: 3, // when loading initial chunk
-  automaticNameDelimiter: '~', // vendors~app.chunk.min.js
-  name: true, // true - auto generated, can be string, two cache groups can have same name, can even have same name as entry
+  // minSize: 30000, // KB, minimum size for chunk to be created (pre-min and pre-gzip)
+  // minChunks: 1, // minimum number of chunks that must share a module before splitting.
+  // maxAsyncRequests: 5, // when loading async chunk
+  // maxInitialRequests: 3, // when loading initial chunk
+  // automaticNameDelimiter: '~', // vendors~app.chunk.min.js
+  // name: true, // true - auto generated, can be string, two cache groups can have same name, can even have same name as entry
   cacheGroups: {
     vendors: {
       test: /[\\/]node_modules[\\/]/, // can be omitted (will select all), string, regexp -  controls which modules are selected by this cache group
