@@ -11,21 +11,15 @@ For user:
 For developers:
 * [+] Enforces better code organization, less coupling
 * [-] More complex builds
-## When to use
-
-* Large app
-* App with many different features
 
 ## When to consider avoiding
-
 * Small app (smaller chunks reduce compression efficiency)
 * You don't have HTTP2 server
-* Your user don't have HTTP2 capable browsers
-
-
+* Your users don't have HTTP2 capable browsers
 
 ## Links
-https://www.npmjs.com/package/webpack-bundle-analyzer
-https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/
-https://github.com/smooth-code/loadable-components
-https://github.com/vybu/async-redux-store-enhancer
+https://www.npmjs.com/package/webpack-bundle-analyzer 
+https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/  
+https://github.com/smooth-code/loadable-components  
+https://github.com/vybu/async-redux-store-enhancer  
+https://medium.com/@asyncmax/the-right-way-to-bundle-your-assets-for-faster-sites-over-http-2-437c37efe3ff  
