@@ -65,6 +65,11 @@ module.exports = {
     }),
     new BundleAnalyzerPlugin(),
   ],
-
   mode: 'development',
+
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
