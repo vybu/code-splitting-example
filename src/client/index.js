@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import loadable from './common/loadable';
 import { rootReducer } from './store/rootReducer';
 import { setPresetItems } from './modules/postList/postList.actions';
-import StatsPage from './StatsPage';
 import PostBoardPage from './PostBoardPage';
 import CreatePostDialog from './CreatePostDialog';
 import './base-styles.css';
@@ -22,7 +22,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Fragment>
-        <Route path="/stats" component={StatsPage} />
+        <Route path="/stats" component={loadable(() => import(/* webpackChunkName: "StatsPage" */'./StatsPage'))} />
         <Route exact path="/(create-post)?" component={PostBoardPage} />
         <Route path="/create-post" component={CreatePostDialog} />
       </Fragment>

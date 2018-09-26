@@ -73,15 +73,6 @@ module.exports = {
         vendors: {
           chunks: 'all',
           test: /[\\/]node_modules[\\/]/,
-          name: (module) => {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-
-            if (packageName.includes('react') || packageName.includes('rechart')) {
-              return 'react-vendors';
-            }
-
-            return 'vendors';
-          },
         },
       },
     },
