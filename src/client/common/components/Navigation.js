@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
+import { DynamicStatsPage } from '../..';
 
 const Navigation = () => (
   <nav className="Navigation">
@@ -8,7 +9,13 @@ const Navigation = () => (
       board
     </NavLink>
     &nbsp;/&nbsp;
-    <NavLink className="Navigation-link" activeClassName="Navigation-linkActive" to="/stats">
+    <NavLink
+      onMouseOver={() => DynamicStatsPage.load()}
+      onFocus={() => DynamicStatsPage.load()}
+      className="Navigation-link"
+      activeClassName="Navigation-linkActive"
+      to="/stats"
+    >
       stats
     </NavLink>
   </nav>

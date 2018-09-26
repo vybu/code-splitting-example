@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import loadable from './common/loadable';
+import loadable from 'loadable-components';
 import { rootReducer } from './store/rootReducer';
 import { setPresetItems } from './modules/postList/postList.actions';
 import PostBoardPage from './PostBoardPage';
-import CreatePostDialog from './CreatePostDialog';
 import './base-styles.css';
+
+export const DynamicStatsPage = loadable(() => import(/* webpackChunkName: "StatsPage" */'./StatsPage'));
+export const DynamicCreatePostDialog = loadable(() => import(/* webpackChunkName: "CreatePostDialog" */'./CreatePostDialog'));
 
 const store = createStore(
   rootReducer,
@@ -22,9 +24,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Fragment>
-        <Route path="/stats" component={loadable(() => import(/* webpackChunkName: "StatsPage" */'./StatsPage'))} />
+        <Route path="/stats" component={DynamicStatsPage} />
         <Route exact path="/(create-post)?" component={PostBoardPage} />
-        <Route path="/create-post" component={CreatePostDialog} />
+        <Route path="/create-post" component={DynamicCreatePostDialog} />
       </Fragment>
     </Router>
   </Provider>,
