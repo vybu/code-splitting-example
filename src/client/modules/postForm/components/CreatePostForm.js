@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import ReactQuill from 'react-quill'; // ES6
-import 'react-quill/dist/quill.snow.css'; // ES6
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import { createPost } from '../../postList/postList.actions';
 import { setBody, setAuthor } from '../postForm.actions';
 import { getAuthorNameValue, getBodyValue } from '../postForm.selectors';
