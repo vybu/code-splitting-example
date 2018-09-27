@@ -1,5 +1,5 @@
 import React from 'react';
-import PostList from './modules/postList/components/PostList';
+import PostList from './modules/postList';
 import PageContainer from './common/components/PageContainer';
 
 const PostBoardPage = () => (
