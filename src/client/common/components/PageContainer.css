@@ -1,6 +1,6 @@
 
 .PageContainer-outerContainer {
-  background-color: #f4f9ff;
+  background-color: #3a4750;
 }
 
 .PageContainer-innerContainer {
@@ -13,7 +13,7 @@
 
 .PageContainer-header {
   background-color: #63c8d2;
-  height: 60px;
+  height: 80px;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -23,6 +23,6 @@
 }
 
 .PageContainer-title {
-  font-size: 1.5em;
+  font-size: 30px;
   margin: 0;
 }

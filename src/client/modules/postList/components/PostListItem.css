@@ -1,6 +1,6 @@
 .PostListItem {
-  margin: 12px 0;
-  padding: 12px 24px;
+  margin: 14px 0;
+  padding: 14px 28px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 2px;
 }
@@ -8,13 +8,13 @@
 .PostListItem-header {
   text-align: start;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.7);
 }
 
 .PostListItem-body {
   text-align: start;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .PostListItem-body p {

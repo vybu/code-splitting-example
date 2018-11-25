@@ -4,8 +4,7 @@
   "description": "Example project for code splitting with webpack 4",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --profile --json > webpack.stats.json",
-    "analyze": "webpack-bundle-analyzer ./webpack.stats.json ./dist --default-sizes gzip",
+    "build": "webpack --config ./webpack.config.js",
     "server": "node ./src/server"
   },
   "author": "Vytenis Butkevicius",
