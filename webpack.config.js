@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //eslint-disable-line
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //eslint-disable-line
+const PrefetchCssWebpackPlugin = require('html-prefetch-css-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -63,6 +64,7 @@ module.exports = {
       inject: true,
       template: path.join(__dirname, 'public/index.html'),
     }),
+    new PrefetchCssWebpackPlugin(),
     new BundleAnalyzerPlugin(),
   ],
 
